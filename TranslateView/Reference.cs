@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TranslateView
 {
-    public partial class Form1 : Form
+    public partial class Reference : Form
     {
-        public Form1()
+        public Reference()
         {
             InitializeComponent();
         }
@@ -20,18 +20,6 @@ namespace TranslateView
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Translate form = new Translate();
-            form.ShowDialog();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Reference form = new Reference();
-            form.ShowDialog();
         }
     }
 }
