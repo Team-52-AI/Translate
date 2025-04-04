@@ -10,16 +10,21 @@ using System.Windows.Forms;
 
 namespace TranslateView
 {
+    // Класс формы "Reference" (справочная информация)
     public partial class Reference : Form
     {
+        // Конструктор класса формы Reference
         public Reference()
         {
+            // Инициализация компонентов формы, созданных в дизайнере
             InitializeComponent();
         }
 
+        // Обработчик события нажатия на кнопку button2
         private void button2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            // Закрытие текущей формы
+            this.Close();
         }
     }
 }
