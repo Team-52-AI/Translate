@@ -17,6 +17,8 @@ namespace TranslateLibrary
         
         private const string digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+        public static string Digits => digits;
+
         /// <summary>
         /// Переводит число N из системы счисления p в систему счисления q.
         /// </summary>
@@ -52,7 +54,7 @@ namespace TranslateLibrary
             // Переводим целую часть в десятичную систему счисления
             foreach (char digit in intPart)
             {
-                decimalValue = decimalValue * p + digits.IndexOf(digit); 
+                decimalValue = decimalValue * p + Digits.IndexOf(digit); 
             }
 
             string result = "";
@@ -60,7 +62,7 @@ namespace TranslateLibrary
             // Переводим из десятичной системы в q-ричную, записывая остатки от деления
             do
             {
-                result = digits[decimalValue % q] + result;
+                result = Digits[decimalValue % q] + result;
             }
             while ((decimalValue /= q) > 0);
 
@@ -85,7 +87,7 @@ namespace TranslateLibrary
             // Переводим дробную часть в десятичную систему счисления
             foreach (char digit in fractionPart)
             {
-                decimalFraction += digits.IndexOf(digit) * power;
+                decimalFraction += Digits.IndexOf(digit) * power;
                 power /= p;
             }
 
@@ -95,7 +97,7 @@ namespace TranslateLibrary
             for (int i = 0; i < m; i++)
             {
                 decimalFraction *= q;
-                result += digits[(int)decimalFraction];
+                result += Digits[(int)decimalFraction];
                 decimalFraction -= (int)decimalFraction;
             }
 

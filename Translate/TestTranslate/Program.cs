@@ -35,7 +35,7 @@ namespace TestTranslate
             {
                 foreach (char d in n)
                 {
-                    if (Translate.digits.IndexOf(d) > p - 1)
+                    if (Translate.Digits.IndexOf(d) > p - 1)
                         throw new System.IndexOutOfRangeException();
                 }    
             }
